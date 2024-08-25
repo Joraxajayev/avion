@@ -1,0 +1,78 @@
+.ceramics {
+  padding-top: 80px;
+  padding-bottom: 56px;
+}
+
+.ceramics__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 33px;
+
+  @include media() {
+    gap: 19px;
+    align-items: stretch;
+  }
+
+  .ceramics__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+
+    @include media() {
+      align-items: stretch;
+    }
+  }
+
+  h2 {
+    color: rgb(42, 37, 75);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 39px;
+    letter-spacing: 0%;
+    text-align: left;
+
+    @include media() {
+      font-size: 20px;
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+
+    @include media() {
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    li {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      span {
+        padding-top: 16px;
+        color: rgb(42, 37, 75);
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: 0%;
+        text-align: left;
+      }
+
+      p {
+        color: rgb(42, 37, 75);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0%;
+        text-align: left;
+      }
+    }
+  }
+}

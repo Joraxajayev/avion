@@ -1,0 +1,154 @@
+.header {
+  // position: absolute;
+  // width: 100%;
+  // background-color: transparent;
+  padding-top: 20px;
+}
+
+.header__wrapper,
+.header__list {
+  display: flex;
+}
+
+.header__wrapper {
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  a {
+    z-index: 99;
+  }
+}
+
+.header_top {
+  padding-bottom: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #0000001a;
+
+  @include media() {
+    display: none;
+  }
+}
+
+.header_login {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header_bottom {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+
+  @include media() {
+    padding-top: 0;
+
+  }
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include media() {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.mobile__logo {
+  display: none;
+
+  @include media() {
+    display: block;
+  }
+}
+
+.header__list {
+  gap: 44px;
+  align-items: center;
+  transition: all 0.3s ease;
+
+  @include media() {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100vh;
+    padding-bottom: 10vh;
+    background-color: #ababab;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(-100%);
+    gap: 30px;
+  }
+}
+
+.header__list_item a {
+  color: rgb(114, 110, 141);
+  text-align: right;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 125%;
+
+  @include media() {
+    color: #fff;
+    font-size: 30px;
+  }
+}
+
+.header__list_item .active {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 125%;
+  color: #1f1534;
+
+  @include media() {
+    font-size: 30px;
+  }
+}
+
+.header__list_item :hover {
+  color: #1f1f1f;
+}
+
+#menuopener {
+  visibility: hidden;
+}
+
+#menuopener:checked + .header__list {
+  transform: translateX(0);
+}
+
+.header_btns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  img {
+    display: none;
+
+    @include media() {
+      display: block;
+    }
+  }
+}
+
+.menuopnerBtn {
+  display: none;
+  width: 35px;
+  height: 35px;
+  background-image: url(../../images/menu_btn.svg);
+  background-size: contain;
+
+  @include media() {
+    display: block;
+  }
+}

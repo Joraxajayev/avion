@@ -1,0 +1,114 @@
+.footer {
+  padding-top: 58px;
+  padding-bottom: 48px;
+  background-color: rgb(42, 37, 75);
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+ 
+}
+
+.footer-column {
+  flex: 1;
+  margin: 10px 20px;
+
+  .signup-container {
+    padding: 0;
+    
+  }
+}
+.footer-column h3 {
+  margin-bottom: 15px;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+.footer-column ul li a {
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-decoration: none;
+}
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+.signupp-form {
+  display: flex;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+  background-color: #5e548e;
+}
+
+.signupp-form input[type="email"] {
+  border: none;
+  border-radius: 0;
+  outline: none;
+  font-size: 14px !important;
+  flex: 1;
+  color: #ffffff !important;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: left;
+  background: #ffffff26;
+}
+.signupp-form button {
+  color: rgb(42, 37, 75);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: left;
+  background-color: #fff;
+  padding: 16px 32px;
+  border: none;
+  cursor: pointer;
+}
+.footer-bottom {
+  border-top: 1px solid #4c426c;
+  padding-top: 24px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 40px;
+
+  p {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-decoration: none;
+  }
+}
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.social-icons a {
+}

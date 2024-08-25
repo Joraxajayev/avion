@@ -1,0 +1,113 @@
+.signup {
+  margin-top: 48px;
+  padding-top: 52px;
+  padding-bottom: 64px;
+  background-color: #f9f9f9;
+
+  @include media() {
+    margin: 0;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+.signup_wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.signup__content {
+  padding-top: 68px;
+  padding-bottom: 54px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  @include media() {
+    padding-top: 48px;
+    padding-bottom: 38px;
+  }
+
+  h2 {
+    color: rgb(42, 37, 75);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: center;
+
+    @include media() {
+      font-size: 20px;
+    }
+  }
+
+  p {
+    max-width: 470px;
+    color: rgb(42, 37, 75);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+
+    @include media() {
+      font-size: 14px;
+      text-align: left;
+    }
+  }
+}
+
+.signup-container {
+  padding-top: 56px;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+
+  @include media() {
+    padding-top: 48px;
+  }
+}
+.signup-form {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #fff;
+}
+.signup-form input[type="email"] {
+  border: none;
+  padding: 17px 205px 17px 32px;
+  outline: none;
+  flex: 1;
+  color: rgb(42, 37, 75);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0%;
+  text-align: left;
+  opacity: 0.2;
+
+  @include media() {
+    padding: 17px 75px 17px 32px;
+    font-size: 14px;
+  }
+}
+.signup-form button {
+  background: rgb(42, 37, 75);
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: left;
+  padding: 16px 32px;
+  border: none;
+  cursor: pointer;
+}
+.signup-form button:hover {
+  background-color: #3a3278;
+}
