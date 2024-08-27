@@ -62,8 +62,10 @@
 .signup-container {
   padding-top: 56px;
   display: flex;
-  align-items: stretch;
-  justify-content: stretch;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+  margin: 0 auto;
 
   @include media() {
     padding-top: 48px;
@@ -91,9 +93,13 @@
   text-align: left;
   opacity: 0.2;
 
-  @include media() {
-    padding: 17px 75px 17px 32px;
+  @include tablet() {
+    padding: 10px 50px 10px 20px;
     font-size: 14px;
+  }
+
+  @include mobile() {
+    padding: 8px 30px 8px 20px;
   }
 }
 .signup-form button {

@@ -15,9 +15,18 @@
   }
 
   li:nth-last-child(0) {
+
     @include media() {
       display: none;
     }
+  }
+
+  .popular_list_item {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    max-width: 400px;
+    height: auto !important;;
   }
 
   li {

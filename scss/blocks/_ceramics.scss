@@ -51,9 +51,22 @@
     }
 
     li {
+      max-width: 300px;
       display: flex;
       flex-direction: column;
       gap: 8px;
+
+      @include tablet() {
+        max-width: 200px;
+      }
+
+      @include mobile() {
+        max-width: 163px;
+      }
+
+      :first-child {
+        // max-width: 500px;
+      }
 
       span {
         padding-top: 16px;

@@ -7,14 +7,12 @@
 .footer__wrapper {
   display: flex;
   flex-direction: column;
-  
 }
 
 .footer__top {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
- 
 }
 
 .footer-column {
@@ -23,7 +21,6 @@
 
   .signup-container {
     padding: 0;
-    
   }
 }
 .footer-column h3 {
@@ -61,7 +58,12 @@
   background-color: #5e548e;
 }
 
+.signupp-form input {
+  background: #ffffff30;
+}
+
 .signupp-form input[type="email"] {
+  padding: 17px 205px 17px 32px;
   border: none;
   border-radius: 0;
   outline: none;
@@ -73,7 +75,15 @@
   line-height: 20px;
   letter-spacing: 0%;
   text-align: left;
-  background: #ffffff26;
+
+  @include tablet() {
+    padding: 10px 50px 10px 20px;
+    font-size: 14px;
+  }
+
+  @include mobile() {
+    padding: 8px 30px 8px 20px;
+  }
 }
 .signupp-form button {
   color: rgb(42, 37, 75);

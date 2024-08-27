@@ -636,9 +636,20 @@ ul {
   }
 }
 .ceramics__wrapper ul li {
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1025px) {
+  .ceramics__wrapper ul li {
+    max-width: 200px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .ceramics__wrapper ul li {
+    max-width: 163px;
+  }
 }
 .ceramics__wrapper ul li span {
   padding-top: 16px;
@@ -679,6 +690,13 @@ ul {
   .popular_list li:nth-last-child(0) {
     display: none;
   }
+}
+.popular_list .popular_list_item {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  max-width: 400px;
+  height: auto !important;
 }
 .popular_list li {
   display: flex;
@@ -769,8 +787,10 @@ ul {
 .signup-container {
   padding-top: 56px;
   display: flex;
-  align-items: stretch;
-  justify-content: stretch;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+  margin: 0 auto;
 }
 @media only screen and (min-width: 0) and (max-width: 1025px) {
   .signup-container {
@@ -801,10 +821,15 @@ ul {
   text-align: left;
   opacity: 0.2;
 }
-@media only screen and (min-width: 0) and (max-width: 1025px) {
+@media only screen and (min-width: 768px) and (max-width: 1025px) {
   .signup-form input[type=email] {
-    padding: 17px 75px 17px 32px;
+    padding: 10px 50px 10px 20px;
     font-size: 14px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .signup-form input[type=email] {
+    padding: 8px 30px 8px 20px;
   }
 }
 
@@ -969,7 +994,12 @@ ul {
   background-color: #5e548e;
 }
 
+.signupp-form input {
+  background: rgba(255, 255, 255, 0.1882352941);
+}
+
 .signupp-form input[type=email] {
+  padding: 17px 205px 17px 32px;
   border: none;
   border-radius: 0;
   outline: none;
@@ -981,7 +1011,17 @@ ul {
   line-height: 20px;
   letter-spacing: 0%;
   text-align: left;
-  background: rgba(255, 255, 255, 0.1490196078);
+}
+@media only screen and (min-width: 768px) and (max-width: 1025px) {
+  .signupp-form input[type=email] {
+    padding: 10px 50px 10px 20px;
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .signupp-form input[type=email] {
+    padding: 8px 30px 8px 20px;
+  }
 }
 
 .signupp-form button {
