@@ -42,9 +42,8 @@
   gap: 157px;
   align-items: start;
 
-
   @include media() {
-    position: static;
+    position: inherit;
     padding: 48px 30px;
   }
 }

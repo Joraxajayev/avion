@@ -399,6 +399,7 @@ button, input, optgroup, select, textarea {
     justify-content: center;
     transform: translateX(-100%);
     gap: 30px;
+    z-index: 9;
   }
 }
 
@@ -1084,6 +1085,11 @@ button, input, optgroup, select, textarea {
   font-size: 14px;
   margin-top: 40px;
 }
+@media only screen and (max-width: 767px) {
+  .footer-bottom {
+    flex-direction: column;
+  }
+}
 .footer-bottom p {
   color: rgb(255, 255, 255);
   font-size: 16px;
@@ -1099,6 +1105,11 @@ button, input, optgroup, select, textarea {
   justify-content: space-between;
   align-items: center;
   gap: 24px;
+}
+@media only screen and (min-width: 0) and (max-width: 1025px) {
+  .social-icons {
+    flex-wrap: wrap;
+  }
 }
 
 .social-icons a {
@@ -1153,7 +1164,7 @@ button, input, optgroup, select, textarea {
 }
 @media only screen and (min-width: 0) and (max-width: 1025px) {
   .hero_page_content {
-    position: static;
+    position: inherit;
     padding: 48px 30px;
   }
 }
@@ -1221,7 +1232,7 @@ button, input, optgroup, select, textarea {
   }
 }
 .idea__wrapper img {
-  width: 50%;
+  width: 60%;
 }
 @media only screen and (max-width: 767px) {
   .idea__wrapper img {
