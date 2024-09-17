@@ -60,10 +60,25 @@
 
 .signupp-form input {
   background: #ffffff30;
+  padding: 17px 205px 17px 32px;
+  margin: 0;
+
+  @include tablet() {
+    width: 100%;
+    padding: 10px 50px 10px 20px;
+    font-size: 14px;
+  }
+
+  @include mobile() {
+    width: 100%;
+    padding: 8px 30px 8px 20px;
+  }
 }
 
-.signupp-form input[type="email"] {
-  padding: 17px 205px 17px 32px;
+.signupp-form input [type="email"] {
+}
+// 
+.signupp-form input::placeholder {
   border: none;
   border-radius: 0;
   outline: none;
@@ -75,18 +90,10 @@
   line-height: 20px;
   letter-spacing: 0%;
   text-align: left;
-
-  @include tablet() {
-    padding: 10px 50px 10px 20px;
-    font-size: 14px;
-  }
-
-  @include mobile() {
-    padding: 8px 30px 8px 20px;
-  }
 }
 .signupp-form button {
   color: rgb(42, 37, 75);
+  text-wrap: nowrap;
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
@@ -98,6 +105,9 @@
   cursor: pointer;
 }
 .footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   border-top: 1px solid #4c426c;
   padding-top: 24px;
   text-align: center;
@@ -115,10 +125,11 @@
   }
 }
 .social-icons {
-  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 24px;
 }
 .social-icons a {
+  background-color: transparent;
 }

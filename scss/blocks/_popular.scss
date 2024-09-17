@@ -2,37 +2,39 @@
   padding-top: 64px;
 }
 
-.popular_list {
+.popular .popular__content {
+  width: 100%;
   display: flex;
-  align-items: stretch;
-  justify-content: start;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
 
-  @include media() {
-    overflow-x: scroll;
+  ul {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
     gap: 20px;
-    flex-wrap: nowrap !important;
-  }
-
-  li:nth-last-child(0) {
+    padding-left: 0;
 
     @include media() {
-      display: none;
+      overflow-x: scroll;
+      gap: 20px;
+      flex-wrap: nowrap !important;
     }
   }
 
-  .popular_list_item {
-    display: flex;
-    align-items: stretch;
-    justify-content: stretch;
-    max-width: 400px;
-    height: auto !important;;
-  }
-
   li {
+    max-width: 605px;
     display: flex;
+    align-items: start;
     flex-direction: column;
     gap: 8px;
+
+    img {
+      width: 305px;
+      height: 375px;
+    }
 
     span {
       padding-top: 16px;
@@ -52,5 +54,9 @@
       letter-spacing: 0%;
       text-align: left;
     }
+  }
+  .popular__sofa_img {
+    width: 605px;
+    height: 375px;
   }
 }

@@ -19,6 +19,27 @@
   border: 1px solid #f9f9f9;
 }
 
+.btnn {
+  padding: 16px 32px;
+  background: #f9f9f9;
+  color: #2a254b;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btnn:hover {
+  background: #1f1f1f;
+  color: #f9f9f9;
+  border: 1px solid #1f1f1f;
+}
+
 .btns {
   padding: 16px 32px;
   background: #f9f9f9;
@@ -270,6 +291,10 @@ a {
 
 ul {
   list-style: none;
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0 !important;
 }
 
 .container_header {
@@ -624,6 +649,7 @@ ul {
   }
 }
 .ceramics__wrapper ul {
+  padding-left: 0;
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -673,37 +699,40 @@ ul {
   padding-top: 64px;
 }
 
-.popular_list {
+.popular .popular__content {
+  width: 100%;
   display: flex;
-  align-items: stretch;
-  justify-content: start;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+}
+.popular .popular__content ul {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
   gap: 20px;
+  padding-left: 0;
 }
 @media only screen and (min-width: 0) and (max-width: 1025px) {
-  .popular_list {
+  .popular .popular__content ul {
     overflow-x: scroll;
     gap: 20px;
     flex-wrap: nowrap !important;
   }
 }
-@media only screen and (min-width: 0) and (max-width: 1025px) {
-  .popular_list li:nth-last-child(0) {
-    display: none;
-  }
-}
-.popular_list .popular_list_item {
+.popular .popular__content li {
+  max-width: 605px;
   display: flex;
-  align-items: stretch;
-  justify-content: stretch;
-  max-width: 400px;
-  height: auto !important;
-}
-.popular_list li {
-  display: flex;
+  align-items: start;
   flex-direction: column;
   gap: 8px;
 }
-.popular_list li span {
+.popular .popular__content li img {
+  width: 305px;
+  height: 375px;
+}
+.popular .popular__content li span {
   padding-top: 16px;
   color: rgb(42, 37, 75);
   font-size: 20px;
@@ -712,13 +741,17 @@ ul {
   letter-spacing: 0%;
   text-align: left;
 }
-.popular_list li p {
+.popular .popular__content li p {
   color: rgb(42, 37, 75);
   font-size: 18px;
   font-weight: 400;
   line-height: 150%;
   letter-spacing: 0%;
   text-align: left;
+}
+.popular .popular__content .popular__sofa_img {
+  width: 605px;
+  height: 375px;
 }
 
 .signup {
@@ -996,10 +1029,24 @@ ul {
 
 .signupp-form input {
   background: rgba(255, 255, 255, 0.1882352941);
+  padding: 17px 205px 17px 32px;
+  margin: 0;
+}
+@media only screen and (min-width: 768px) and (max-width: 1025px) {
+  .signupp-form input {
+    width: 100%;
+    padding: 10px 50px 10px 20px;
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .signupp-form input {
+    width: 100%;
+    padding: 8px 30px 8px 20px;
+  }
 }
 
-.signupp-form input[type=email] {
-  padding: 17px 205px 17px 32px;
+.signupp-form input::placeholder {
   border: none;
   border-radius: 0;
   outline: none;
@@ -1012,20 +1059,10 @@ ul {
   letter-spacing: 0%;
   text-align: left;
 }
-@media only screen and (min-width: 768px) and (max-width: 1025px) {
-  .signupp-form input[type=email] {
-    padding: 10px 50px 10px 20px;
-    font-size: 14px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .signupp-form input[type=email] {
-    padding: 8px 30px 8px 20px;
-  }
-}
 
 .signupp-form button {
   color: rgb(42, 37, 75);
+  text-wrap: nowrap;
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
@@ -1038,6 +1075,9 @@ ul {
 }
 
 .footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   border-top: 1px solid #4c426c;
   padding-top: 24px;
   text-align: center;
@@ -1055,8 +1095,151 @@ ul {
 }
 
 .social-icons {
-  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 24px;
+}
+
+.social-icons a {
+  background-color: transparent;
+}
+
+.hero_homepage {
+  padding-top: 0;
+  margin-left: 0;
+  padding-left: 0;
+  margin: 0 auto;
+}
+
+.hero_bg {
+  position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.hero__bg {
+  width: 100%;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 0) and (max-width: 1025px) {
+  .hero__bg {
+    display: none;
+  }
+}
+
+.hero__bg_mobile {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  display: none;
+}
+@media only screen and (min-width: 0) and (max-width: 1025px) {
+  .hero__bg_mobile {
+    display: block;
+  }
+}
+
+.hero_page_content {
+  position: absolute;
+  right: 80px;
+  top: 130px;
+  padding: 48px 61px 46px 56px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 157px;
+  align-items: start;
+}
+@media only screen and (min-width: 0) and (max-width: 1025px) {
+  .hero_page_content {
+    position: static;
+    padding: 48px 30px;
+  }
+}
+
+.hero_page_content_title {
+  max-width: 513px;
+}
+.hero_page_content_title h2 {
+  color: rgb(34, 32, 46);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.hero_page_content_title span {
+  color: rgb(91, 86, 118);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.signupp {
+  width: 100%;
+  margin: 0 auto;
+  background-image: url(../../images/sign_up.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media only screen and (min-width: 0) and (max-width: 1025px) {
+  .signupp {
+    margin: 0;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+.signupp .signup_wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+.signupp .signup__content {
+  padding-top: 97px;
+  padding-bottom: 77px;
+}
+
+.idea {
+  padding: 60px 0;
+}
+
+.idea_page_content {
+  padding: 48px 61px 46px 56px;
+  background-color: #2a254b;
+  display: flex;
+  flex-direction: column;
+  gap: 157px;
+  align-items: start;
+}
+@media only screen and (min-width: 0) and (max-width: 1025px) {
+  .idea_page_content {
+    position: static;
+    padding: 48px 30px;
+  }
+}
+
+.idea_page_content_title {
+  max-width: 513px;
+}
+.idea_page_content_title h2 {
+  color: rgb(34, 32, 46);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.idea_page_content_title span {
+  color: rgb(91, 86, 118);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: left;
 }/*# sourceMappingURL=main.css.map */

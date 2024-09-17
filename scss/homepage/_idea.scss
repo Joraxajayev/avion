@@ -1,0 +1,39 @@
+.idea {
+  padding: 60px 0;
+}
+
+.idea_page_content {
+  padding: 48px 61px 46px 56px;
+  background-color: #2a254b;
+  display: flex;
+  flex-direction: column;
+  gap: 157px;
+  align-items: start;
+
+  @include media() {
+    position: static;
+    padding: 48px 30px;
+  }
+}
+
+.idea_page_content_title {
+  max-width: 513px;
+
+  h2 {
+    color: rgb(34, 32, 46);
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+
+  span {
+    color: rgb(91, 86, 118);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+}

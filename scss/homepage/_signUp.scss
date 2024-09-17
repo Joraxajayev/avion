@@ -1,0 +1,27 @@
+.signupp {
+  width: 100%;
+  margin: 0 auto;
+  // padding-top: 52px;
+  // padding-bottom: 64px;
+  background-image: url(../../images/sign_up.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include media() {
+    margin: 0;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+.signupp .signup_wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+.signupp .signup__content {
+  padding-top: 97px;
+  padding-bottom: 77px;
+}
