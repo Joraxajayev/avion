@@ -1209,6 +1209,26 @@ button, input, optgroup, select, textarea {
   padding: 60px 0;
 }
 
+.idea__wrapper {
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+  justify-content: stretch;
+}
+@media only screen and (max-width: 767px) {
+  .idea__wrapper {
+    flex-direction: column;
+  }
+}
+.idea__wrapper img {
+  width: 50%;
+}
+@media only screen and (max-width: 767px) {
+  .idea__wrapper img {
+    width: 100%;
+  }
+}
+
 .idea_page_content {
   padding: 48px 61px 46px 56px;
   background-color: #2a254b;
@@ -1228,7 +1248,7 @@ button, input, optgroup, select, textarea {
   max-width: 513px;
 }
 .idea_page_content_title h2 {
-  color: rgb(34, 32, 46);
+  color: #ffffff;
   font-size: 32px;
   font-weight: 400;
   line-height: 140%;
@@ -1236,7 +1256,7 @@ button, input, optgroup, select, textarea {
   text-align: left;
 }
 .idea_page_content_title span {
-  color: rgb(91, 86, 118);
+  color: #ffffff;
   font-size: 18px;
   font-weight: 400;
   line-height: 150%;

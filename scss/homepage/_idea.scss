@@ -2,6 +2,25 @@
   padding: 60px 0;
 }
 
+.idea__wrapper {
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+  justify-content: stretch;
+
+  @include mobile() {
+    flex-direction: column;
+  }
+
+  img {
+    width: 50%;
+
+    @include mobile() {
+      width: 100%;
+    }
+  }
+}
+
 .idea_page_content {
   padding: 48px 61px 46px 56px;
   background-color: #2a254b;
@@ -20,7 +39,7 @@
   max-width: 513px;
 
   h2 {
-    color: rgb(34, 32, 46);
+    color: #ffffff;
     font-size: 32px;
     font-weight: 400;
     line-height: 140%;
@@ -29,7 +48,7 @@
   }
 
   span {
-    color: rgb(91, 86, 118);
+    color: #ffffff;
     font-size: 18px;
     font-weight: 400;
     line-height: 150%;
